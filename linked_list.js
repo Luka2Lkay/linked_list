@@ -36,11 +36,11 @@ class LinkedList {
 
   size() {
     let length = 0;
-    let head = this.head;
+    let currentNode = this.head;
 
-    while (head) {
+    while (currentNode) {
       length++;
-      head = head.next;
+      currentNode = currentNode.next;
     }
     return length;
   }
@@ -55,7 +55,7 @@ class LinkedList {
 
   at(index) {
     if (index < 0 || index >= this.size()) {
-      throw new Error("The index is out of the range");
+      throw new Error("The index is out of range");
     }
 
     let counter = 0;
@@ -172,7 +172,7 @@ class LinkedList {
     let count = 0;
 
     if (index >= this.size() || index < 0)
-      throw new Error("Index out of range");
+      throw new Error("The index is out of range");
 
     while (count < index) {
       previousNode = currentNode;
